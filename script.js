@@ -44,7 +44,7 @@ function loadLabeledImages() {
             const descriptions = []
 
             for (let i = 1; i <= 4; i++) {
-                const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/praveen12math/Face-Recognition-with-JavaScript/master/labeled_images/${label}/${i}.jpg`)
+                const img = await faceapi.fetchImage(`https://raw.githubusercontent.com/praveen12math/labeled-image/master/${label}/${i}.jpg`)
 
                 const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
                 descriptions.push(detections.descriptor)
